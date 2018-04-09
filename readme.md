@@ -1,6 +1,10 @@
-# Millennials to Snake People
+# Hamburgers to Steamed Hams
 
-Firefox extension that reveals the _real_ truth behind Millennials.
+It's an Albany expression.
+
+spells did all the work, I'm just changing the find/replace words
+
+# original 
 
 ## Installation
 
