@@ -33,7 +33,7 @@ function handleText(textNode) {
 
 function replaceText(v)
 {
-    // Fix some misspellings
+    // Apply regional dialect.
     v = v.replace(/\bHamburger(s)?\b/g, "Steamed ham$1");
     v = v.replace(/\bhamburger(s)?\b/g, "steamed ham$1");
     v = v.replace(/\bincredible experience(s)?\b/g, "unforgettable luncheon$1");
