@@ -2,7 +2,7 @@
 
 It's an Albany expression.
 
-spells did all the work, I'm just changing the find/replace words
+PSELLE did all the work, I'm just changing the find/replace words
 
 # original 
 
