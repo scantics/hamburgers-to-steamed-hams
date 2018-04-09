@@ -1,27 +1,28 @@
 {
-  "name": "millennials-to-snake-people-mozilla",
+  "name": "hamburgers-to-steamed-hams-mozilla",
   "version": "1.2.0",
-  "description": "Millennials to Snake People (for Firefox)",
+  "description": "Live the patented Skinnerburger lifestyle like a true Albanite.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pselle/millennials-to-snake-people.git"
+    "url": "https://github.com/scantics/millennials-to-snake-people.git"
   },
   "keywords": [
-    "millennials",
-    "snake",
-    "people",
+    "simpsons",
+    "Steamed hams",
+    "Regional dialect",
+    "Replace words",
     "firefox",
     "extensions"
   ],
-  "author": "Pam Selle",
+  "author": "Seymour Skinner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pselle/millennials-to-snake-people/issues"
+    "url": "https://github.com/scantics/millennials-to-snake-people/issues"
   },
    "engines": {
     "firefox": ">=38.0a1",
     "fennec": ">=38.0a1"
   },
-  "homepage": "https://github.com/pselle/millennials-to-snake-people"
+  "homepage": "https://github.com//millennials-to-snake-people"
 }
