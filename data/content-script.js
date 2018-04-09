@@ -17,19 +17,16 @@ function walk(rootNode)
 
 function handleText(textNode) {
     var text = textNode.wholeText;
-    if(text.search(/millennial/i) >= 0
-        || text.search(/millenial/i) >= 0 // misspelling
-        || text.search(/(mil·len·ni·al|mə-lĕn′ē-əl)/i) >= 0
-        || text.search(/miˈlenēəl/i) >= 0
-        || text.search(/great (depression|recession)/i) >= 0
-        || text.search(/(ows|occupy) movement/i) >= 0
-        || text.search(/helicopter parent/i) >= 0
-        || text.search(/trophy kid/i) >= 0
-        || text.search(/digital native/i) >= 0
-        || text.search(/generation (z|y|we|me|global|next|net|flux|sell|boomerang|peter pan|9\/?11|precarious)/i) >= 0
-        || text.search(/(z|y|we|me|global|next|net|flux|sell|boomerang|peter pan|9\/?11|precarious) generation/i) >= 0
-        || text.search(/tween/i) >= 0
-        || text.search(/Mileurista/i) >= 0) {
+    if(text.search(/hamburger/i) >= 0 // steamed hams
+        || text.search(/incredible experience/i) >= 0 // unforgettable luncheon
+        || text.search(/fast food/i) >= 0 // my own cooking 
+        || text.search(/(Krusty|big mac|whopper)/i) >= 0 // patented skinnerburgers
+        || text.search(/(kitchen|stove) fire/i) >= 0 // aurora borealis
+        || text.search(/stretching/i) >= 0 // isometric exercise
+        || text.search(/a good man/i) >= 0 // steams a good ham
+        || text.search(/I made it/i) >= 0 // I made it, despite your directions
+        || text.search(/bigger/i) >= 0 // steamier
+        || text.search(/brilliant/i) >= 0) { // delightfully devilish
         textNode.nodeValue = replaceText(textNode.nodeValue);
     }
 }
@@ -37,10 +34,24 @@ function handleText(textNode) {
 function replaceText(v)
 {
     // Fix some misspellings
-    v = v.replace(/\b(M|m)illienial(s)?\b/g, "$1illennial$2");
-    v = v.replace(/\b(M|m)illenial(s)?\b/g, "$1illennial$2");
-    v = v.replace(/\b(M|m)ilennial(s)?\b/g, "$1illennial$2");
-    v = v.replace(/\b(M|m)ilenial(s)?\b/g, "$1illennial$2");
+    v = v.replace(/\bHamburger(s)?\b/g, "Steamed ham$1");
+    v = v.replace(/\bhamburger(s)?\b/g, "steamed ham$1");
+    v = v.replace(/\bincredible experience(s)?\b/g, "unforgettable luncheon$1");
+    v = v.replace(/\bIncredible experience(s)?\b/g, "Unforgettable luncheon$1");
+    v = v.replace(/\bIncredible Experience(s)?\b/g, "Unforgettable Luncheon$1");
+    v = v.replace(/\b(B|b)ig (M|m)ac(s)?\b/g, "Patented Skinnerburger$3");
+    v = v.replace(/\b(W|w)hopper(s)?\b/g, "Patented Skinnerburger$2");
+    v = v.replace(/\b(K|k)rusty( )?(B|b)urgers(s)?\b/g, "Patented Skinnerburger$4");
+    v = v.replace(/\bfast food(s)?\b/g, "my own cooking");
+    v = v.replace(/\bFast (F|f)ood(s)?\b/g, "My own cooking");
+    v = v.replace(/\bstretching\b/g, "isometric exercise");
+    v = v.replace(/\bhe's a good man\b/g, "he steams a good ham");
+    v = v.replace(/\bwas a good man\b/g, "steamed a good ham");
+    v = v.replace(/\bbigger\b/g, "steamier");
+    v = v.replace(/\bBigger\b/g, "Steamier");
+    v = v.replace(/\bbrilliant\b/g, "delightfully devilish");
+
+
 
     // Millennial Generation
     v = v.replace(
@@ -52,64 +63,7 @@ function replaceText(v)
         "Plissken faction"
     );
 
-    // Millennialism
-    v = v.replace(/\bMillennialism\b/g, "Reptilianism");
-    v = v.replace(/\bmillennialism\b/g, "reptilianism");
-
-
-    //  Gendered Millennials
-    v = v.replace(/\bMillennial (M|m)(e|a)n('s)?\b/g, "Snake $1$2n$3");
-    v = v.replace(/\bmillennial m(e|a)n('s)?\b/g, "snake m$1n$2");
-    v = v.replace(/\bMillennial (B|b)oy('s|s(?:')?)?\b/g, "Snake $1oy$2");
-    v = v.replace(/\bmillennial boy('s|s(?:')?)?\b/g, "snake boy$1");
-    v = v.replace(/\bMillennial (G|g)uy('s|s(?:')?)?\b/g, "Snake $1uy$2");
-    v = v.replace(/\bmillennial guy('s|s(?:')?)?\b/g, "snake guy$1");
-    v = v.replace(/\bMillennial (W|w)om(e|a)n('s)?\b/g, "Snake $1om$2n$3");
-    v = v.replace(/\bmillennial wom(e|a)n('s)?\b/g, "snake wom$1n$2");
-    v = v.replace(/\bMillennial (G|g)irl('s|s(?:')?)?\b/g, "Snake $1irl$2");
-    v = v.replace(/\bmillennial girl('s|s(?:')?)?\b/g, "snake girl$1");
-    v = v.replace(/\bMillennial (G|g)al('s|s(?:')?)?\b/g, "Snake $1al$2");
-    v = v.replace(/\bmillennial gal('s|s(?:')?)?\b/g, "snake gal$1");
-
-    //  Aged Millennials
-    v = v.replace(/\bMillennial Child('s)?\b/g, "Snakelet$1");
-    v = v.replace(/\b[Mm]illennial child('s)?\b/g, "snakelet$1");
-    v = v.replace(/\bMillennial Children(?:(')s)?\b/g, "Snakelets$1");
-    v = v.replace(/\b[Mm]illennial children(?:(')s)?\b/g, "snakelets$1");
-    v = v.replace(
-        /\bMillennial [Tt]een(?:ager)?('s)?\b/g,
-        "proto-Snake Person$1"
-    );
-    v = v.replace(/\bmillennial teen(?:ager)?('s)?\b/g, "proto-snake person$1");
-    v = v.replace(
-        /\bMillennial [Tt]een(?:ager)?(?:(s)\b(')|s\b)/g,
-        "proto-Snake People$2$1"
-    );
-    v = v.replace(
-        /\bmillennial teen(?:ager)?(?:(s)\b(')|s\b)/g,
-        "proto-snake people$2$1"
-    );
-    v = v.replace(/\bMillennial (A|a)dult('s)?\b/g, "$1dult Snake Person$2");
-    v = v.replace(/\bmillennial adult('s)?\b/g, "adult snake person$1");
-    v = v.replace(
-        /\bMillennial (A|a)dult(?:(s)\b(')|s\b)/g,
-        "$1dult Snake People$3$2"
-    );
-    v = v.replace(
-        /\bmillennial adult(?:(s)\b(')|s\b)/g,
-        "adult snake people$2$1"
-    );
-
-     // Definition
-    v = v.replace(/\bmil·len·ni·al\b/g, "sn·a·ke pe·op·le");
-    v = v.replace(/\bmə-lĕn′ē-əl\b/g, "snāk ˈpēpəl");
-
-    // Millennial
-    v = v.replace(/\bMillennial\b/g, "Snake Person");
-    v = v.replace(/\bmillennial\b/g, "snake person");
-    v = v.replace(/\bMillennial(?:(s)\b(')|s\b)/g, "Snake People$2$1");
-    v = v.replace(/\bmillennial(?:(s)\b(')|s\b)/g, "snake people$2$1");
-
+    // 
     // The Great Recession
     v = v.replace(/\bGreat Recession\b/g, "Time of Shedding and Cold Rocks");
     v = v.replace(/\bgreat recession\b/g, "time of shedding and cold rocks");
