@@ -41,7 +41,7 @@ function replaceText(v)
     v = v.replace(/\bIncredible Experience(s)?\b/g, "Unforgettable Luncheon$1");
     v = v.replace(/\b(B|b)ig (M|m)ac(s)?\b/g, "Patented Skinnerburger$3");
     v = v.replace(/\b(W|w)hopper(s)?\b/g, "Patented Skinnerburger$2");
-    v = v.replace(/\b(K|k)rusty( )?(B|b)urgers(s)?\b/g, "Patented Skinnerburger$4");
+    v = v.replace(/\b(K|k)rusty( )?(B|b)urger(s)?\b/g, "Patented Skinnerburger$4");
     v = v.replace(/\bfast food(s)?\b/g, "my own cooking");
     v = v.replace(/\bFast (F|f)ood(s)?\b/g, "My own cooking");
     v = v.replace(/\bstretching\b/g, "isometric exercise");
