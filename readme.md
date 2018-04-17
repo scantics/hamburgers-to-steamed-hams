@@ -2,8 +2,6 @@
 
 It's an Albany expression.
 
-# original 
-
 ## Installation
 
 Chrome extension [here](https://chrome.google.com/webstore/detail/fieooplcpndnceolckkkhnfkecpfeije)
