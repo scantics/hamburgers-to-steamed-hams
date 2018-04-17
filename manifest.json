@@ -3,7 +3,7 @@
 
 	"name": "Hamburgers to Steamed Hams",
     "short_name": "Steamed Clams",
-	"description": "Replaces the text 'Hamburgers' with 'Steamed Hams'. It's a regional dialect.",
+	"description": "Replaces the text 'Hamburgers' with 'Steamed Hams' to support regional dialect.",
 	"author": "Seymour Skinner",
 	"version": "2.0",
 
@@ -19,7 +19,7 @@
 		{
 			"matches": ["*://*/*"],
 			"all_frames": true,
-			"js": ["content_script.js"],
+			"js": ["data/content_script.js"],
 			"run_at": "document_end"
 		}
 	]
