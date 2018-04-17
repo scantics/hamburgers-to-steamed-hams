@@ -19,7 +19,7 @@
 		{
 			"matches": ["*://*/*"],
 			"all_frames": true,
-			"js": ["data/content_script.js"],
+			"js": ["content_script.js"],
 			"run_at": "document_end"
 		}
 	]
